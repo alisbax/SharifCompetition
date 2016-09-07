@@ -1,0 +1,12 @@
+<resources>
+    <!--General-->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin">32dp</dimen>
+    <dimen name="buttonHeight">48dp</dimen>
+
+    <!--Edit Text-->
+    <dimen name="editTextPaddingRight">5dp</dimen>
+    <dimen name="editTextPaddingLeft">5dp</dimen>
+    <dimen name="editTextPaddingTop">20dp</dimen>
+    <dimen name="editTextPaddingBottom">20dp</dimen>
+</resources>

@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_white"
+    android:layoutDirection="rtl"
+    android:minWidth="280dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.kokabi.p.navigationsample.Components.CTextViewSansMedium
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal|start"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingTop="0dp"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp" />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/cancel_ripple"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/title_tv"
+        android:layout_marginTop="16dp"
+        app:mrl_rippleColor="@color/mediumGray"
+        app:mrl_rippleRoundedCorners="2dp">
+
+        <com.kokabi.p.navigationsample.Components.CButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:padding="8dp"
+            android:textColor="@color/accentColor"
+            android:textSize="14sp" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_below="@+id/title_tv"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/cancel_ripple"
+        app:mrl_rippleColor="@color/mediumGray"
+        app:mrl_rippleRoundedCorners="2dp">
+
+        <com.kokabi.p.navigationsample.Components.CButton
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:padding="8dp"
+            android:textColor="@color/accentColor"
+            android:textSize="14sp" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

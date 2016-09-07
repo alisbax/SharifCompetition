@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl"
+    android:padding="16dp">
+
+    <com.kokabi.p.navigationsample.Components.CTextViewSansMedium
+        android:id="@+id/text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/internetConnectionError"
+        android:textColor="@color/mediumGray"
+        android:textSize="13sp" />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_below="@+id/text_tv"
+        android:layout_toStartOf="@+id/wifi_ripple"
+        app:mrl_rippleColor="@color/mediumGray">
+
+        <Button
+            android:id="@+id/gprs_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:text="@string/gprs"
+            android:textColor="@color/accentColor"
+            android:textSize="14sp" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/wifi_ripple"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text_tv"
+        app:mrl_rippleColor="@color/mediumGray">
+
+        <Button
+            android:id="@+id/wifi_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="@string/wifi"
+            android:textColor="@color/accentColor"
+            android:textSize="14sp" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

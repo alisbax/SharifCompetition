@@ -1,0 +1,62 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base" />
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/darkPrimaryColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorControlNormal">@color/darkGray</item>
+        <item name="colorControlActivated">@color/accentColor</item>
+    </style>
+
+    <style name="ThemeWithStatueBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/darkPrimaryColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="primaryBackground" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/primaryColor</item>
+    </style>
+
+    <!--TextInputLayoutStyle-->
+    <style name="TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textSize">13sp</item>
+        <item name="counterTextAppearance">@style/TextCounterAppearance</item>
+        <item name="errorTextAppearance">@style/TextErrorAppearance</item>
+        <item name="android:textColorHint">@color/darkPrimaryColor</item>
+    </style>
+
+    <style name="TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextCounterAppearance" parent="TextAppearance.Design.Counter">
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">start</item>
+    </style>
+
+    <!--Linear ProgressView-->
+    <style name="LinearProgress" parent="Material.Drawable.LinearProgress.Determinate">
+        <item name="lpd_strokeColor">@color/accentColor</item>
+        <item name="lpd_strokeSecondaryColor">@color/transparent</item>
+    </style>
+
+    <!--Linear ProgressView-->
+    <style name="LinearProgressNormal" parent="Material.Drawable.LinearProgress.Determinate">
+        <item name="lpd_strokeColor">@color/darkPrimaryColor</item>
+        <item name="lpd_strokeSecondaryColor">@color/accentColor</item>
+    </style>
+
+    <!--Circular ProgressView-->
+    <style name="CircularProgress" parent="Material.Drawable.CircularProgress.Determinate">
+        <item name="cpd_strokeColor">@color/accentColor</item>
+        <item name="cpd_strokeSize">2dp</item>
+    </style>
+</resources>

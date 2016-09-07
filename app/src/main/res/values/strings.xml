@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ماراتون برنامه‌نویسی</string>
+
+    <!--Generals-->
+    <string name="drawer_opened">Opened</string>
+    <string name="drawer_closed">Closed</string>
+    <string name="cancel">بی‌خیال</string>
+    <string name="delete">حذف</string>
+    <string name="ok">باشه</string>
+    <string name="permissionDeniedTitle">متاسفانه به دلیل عدم تایید دسترسی، آزمون باز قادر به انجام درخواست شما نیست؛ در صورت تمایل دسترسی‌ را دوباره تنظیم کنید.</string>
+    <string name="tryAgain">تلاش مجدد</string>
+    <string name="sendReport">ارسال گزارش</string>
+    <string name="internetConnectionError">خطا در اتصال اینترنت</string>
+    <string name="gprs">GPRS</string>
+    <string name="wifi">Wifi</string>
+    <string name="serverError">خطا‌درارتباط باسرور</string>
+
+    <string name="dr_test">آزمون</string>
+    <string name="dr_favorite">آزمون‌های منتخب شما</string>
+    <string name="dr_favored_question">سوالات منتخب شما</string>
+    <string name="dr_history">تاریخچه آزمون‌های شما</string>
+    <string name="dr_saved_test">آزمون‌های ذخیره شده</string>
+    <string name="dr_about">درباره</string>
+    <string name="dr_share">معرفی به دوستان</string>
+    <string name="mobileNo">شماره موبایل</string>
+</resources>
