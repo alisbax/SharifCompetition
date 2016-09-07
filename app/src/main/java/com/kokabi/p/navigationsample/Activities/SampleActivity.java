@@ -1,35 +1,28 @@
 package com.kokabi.p.navigationsample.Activities;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.google.gson.JsonObject;
+import com.kokabi.p.navigationsample.Components.CActivity;
+import com.kokabi.p.navigationsample.Components.CProgressDialog;
 import com.kokabi.p.navigationsample.EventBuss.GeneralMSB;
-import com.kokabi.p.navigationsample.Help.AppController;
 import com.kokabi.p.navigationsample.Help.Constants;
 import com.kokabi.p.navigationsample.R;
-import com.kokabi.p.navigationsample.Services.ApiClient;
-import com.kokabi.p.navigationsample.Services.Sample.SampleApiInterface;
-import com.kokabi.p.navigationsample.Services.ServerListener;
-import com.kokabi.p.navigationsample.Services.ServerResponse;
 
 import java.util.HashMap;
 
 import de.greenrobot.event.EventBus;
 
-public class SampleActivity extends AppCompatActivity implements ServerListener, View.OnClickListener {
+public class SampleActivity extends CActivity {
 
-    Context context;
-    public static SampleActivity instance = null;
-
-    CoordinatorLayout mainContent;
     AppCompatImageButton back_imgbtn;
+    /*Loading Parameters*/
+    LinearLayout placeHolder, progress_ly, reload_ly, reload_btn;
 
     /*Activity Values*/
     int idCategory;
@@ -38,32 +31,24 @@ public class SampleActivity extends AppCompatActivity implements ServerListener,
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample);
-
-        context = this;
-        AppController.setActivityContext(this, this);
-        Constants.preventRestart();
+        initialActivity();
         EventBus.getDefault().register(this);
-        Constants.preventRestart();
-        mainContent = (CoordinatorLayout) findViewById(R.id.mainContent);
 
         findViews();
 
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            idCategory = bundle.getInt("idCat", 0);
-        }
+        new CProgressDialog(false, true).show();
 
-        new ServerResponse()
-                .setCall("signUp", ApiClient.getClient()
-                        .create(SampleApiInterface.class)
-                        .signUp(serviceParameters()), SampleActivity.this);
-    }
+//        Bundle bundle = getIntent().getExtras();
+//        if (bundle != null) {
+//            idCategory = bundle.getInt("idCat", 0);
+//        }
 
-    @Override
-    public void onPause() {
-        //To be able to finish the activity from another page
-        instance = this;
-        super.onPause();
+//        new ServerResponse()
+//                .setCall("signUp", ApiClient.getClient()
+//                        .create(SampleApiInterface.class)
+//                        .signUp(serviceParameters()), SampleActivity.this);
+
+
     }
 
     @Override
@@ -71,12 +56,6 @@ public class SampleActivity extends AppCompatActivity implements ServerListener,
         super.onDestroy();
         EventBus.getDefault().unregister(this);
         Constants.freeMemory();
-    }
-
-    @Override
-    public void finish() {
-        super.finish();
-        instance = null;
     }
 
     @Override
@@ -89,11 +68,6 @@ public class SampleActivity extends AppCompatActivity implements ServerListener,
     }
 
     @Override
-    public void onFailure(String methodName, String message) {
-
-    }
-
-    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.back_imgbtn:
@@ -102,13 +76,28 @@ public class SampleActivity extends AppCompatActivity implements ServerListener,
         }
     }
 
-    private void findViews() {
+    @Override
+    public void findViews() {
+        placeHolder = (LinearLayout) findViewById(R.id.loadingFirstTime);
+        getLayoutInflater().inflate(R.layout.loading_layout, placeHolder);
+        progress_ly = (LinearLayout) placeHolder.findViewById(R.id.progress_ly);
+        reload_ly = (LinearLayout) placeHolder.findViewById(R.id.reload_ly);
+        reload_btn = (LinearLayout) placeHolder.findViewById(R.id.reload_btn);
+        reload_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reload_ly.setVisibility(View.GONE);
+                progress_ly.setVisibility(View.VISIBLE);
+            }
+        });
+
         back_imgbtn = (AppCompatImageButton) findViewById(R.id.back_imgbtn);
 
-        setOnClick();
+        setOnClickListenerForViews();
     }
 
-    private void setOnClick() {
+    @Override
+    public void setOnClickListenerForViews() {
         back_imgbtn.setOnClickListener(this);
     }
 
@@ -125,6 +114,7 @@ public class SampleActivity extends AppCompatActivity implements ServerListener,
         return entity;
     }
 
+    //Event for EvenBus
     public void onEvent(final GeneralMSB event) {
         switch (event.getMessage()) {
             case "testAnswered":

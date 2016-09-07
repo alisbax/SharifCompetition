@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,55 +7,26 @@
     android:focusableInTouchMode="true"
     android:layoutDirection="rtl">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <!--ToolBar-->
         <include
+            android:id="@+id/toolBar"
             layout="@layout/toolbar_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <LinearLayout
+        <!--LoadingLayout-->
+        <include
+            android:id="@+id/loadingFirstTime"
+            layout="@layout/loading_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="16dp"
-            android:paddingLeft="32dp"
-            android:paddingRight="32dp"
-            android:paddingTop="16dp">
+            android:layout_marginTop="?attr/actionBarSize" />
 
-            <com.kokabi.p.navigationsample.Components.CTextInputLayout
-                android:id="@+id/mobile_wrapper"
-                style="@style/TextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin"
-                android:textColorHint="@color/darkGray"
-                app:hintTextAppearance="@style/TextInputLayout">
-
-                <com.kokabi.p.navigationsample.Components.CEditText
-                    android:id="@+id/mobile_edt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="start|center_vertical"
-                    android:hint="@string/mobileNo"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:maxLength="11"
-                    android:paddingEnd="5dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingStart="5dp"
-                    android:singleLine="true"
-                    android:textColor="@color/darkGray"
-                    android:textSize="16sp" />
-
-            </com.kokabi.p.navigationsample.Components.CTextInputLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
