@@ -185,6 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             /*Favorites Fragment*/
             case R.id.dr_favorite:
+                startActivity(new Intent(context, SampleActivity.class));
                 fragmentManager.beginTransaction().replace(R.id.mainContent, listFragments.get(0)).commit();
                 break;
             /*FavoredQuestion Fragment*/
