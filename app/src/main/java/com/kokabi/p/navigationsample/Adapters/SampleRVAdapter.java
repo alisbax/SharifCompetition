@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.kokabi.p.navigationsample.Objects.GeneralObj;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
 
 import java.util.ArrayList;
 

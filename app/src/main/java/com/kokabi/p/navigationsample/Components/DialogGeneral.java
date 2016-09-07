@@ -10,7 +10,7 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.kokabi.p.navigationsample.Help.AppController;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
 
 
 /**

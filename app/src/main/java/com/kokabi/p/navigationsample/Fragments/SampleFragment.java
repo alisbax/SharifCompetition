@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.kokabi.p.navigationsample.DB.DataBase;
 import com.kokabi.p.navigationsample.EventBuss.GeneralMSB;
 import com.kokabi.p.navigationsample.Help.AppController;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
 
 import de.greenrobot.event.EventBus;
 
