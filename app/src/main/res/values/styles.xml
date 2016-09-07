@@ -57,6 +57,6 @@
     <!--Circular ProgressView-->
     <style name="CircularProgress" parent="Material.Drawable.CircularProgress.Determinate">
         <item name="cpd_strokeColor">@color/accentColor</item>
-        <item name="cpd_strokeSize">2dp</item>
+        <item name="cpd_strokeSize">4dp</item>
     </style>
 </resources>

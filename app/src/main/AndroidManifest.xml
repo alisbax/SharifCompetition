@@ -74,6 +74,7 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.SampleActivity"/>
     </application>
 
 </manifest>

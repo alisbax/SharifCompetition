@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@drawable/bg_radius_white"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal"
+    android:paddingBottom="30dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="30dp">
+
+    <com.kokabi.p.navigationsample.Components.CTextViewSansMedium
+        android:id="@+id/download_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginStart="25dp"
+        android:text="@string/downloadData"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp" />
+
+    <com.kokabi.p.navigationsample.Components.CTextViewSansMedium
+        android:id="@+id/upload_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginStart="25dp"
+        android:text="@string/uploadData"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_view"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/CircularProgress" />
+
+</LinearLayout>
