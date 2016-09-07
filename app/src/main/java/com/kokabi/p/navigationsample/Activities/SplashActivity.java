@@ -13,11 +13,11 @@ import android.test.mock.MockPackageManager;
 import android.util.Log;
 import android.view.WindowManager;
 
-import com.kokabi.p.navigationsample.Help.AppController;
 import com.kokabi.p.navigationsample.Components.DialogGeneral;
 import com.kokabi.p.navigationsample.Help.AddShortCut;
+import com.kokabi.p.navigationsample.Help.AppController;
 import com.kokabi.p.navigationsample.Help.Constants;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
 
 
 public class SplashActivity extends AppCompatActivity {

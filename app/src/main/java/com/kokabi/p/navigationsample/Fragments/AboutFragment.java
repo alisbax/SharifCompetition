@@ -12,7 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.kokabi.p.navigationsample.Help.AppController;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
+
 
 public class AboutFragment extends Fragment {
 

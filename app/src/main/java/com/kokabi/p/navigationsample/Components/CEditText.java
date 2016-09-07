@@ -6,7 +6,8 @@ import android.util.AttributeSet;
 
 import com.kokabi.p.navigationsample.Help.Constants;
 import com.kokabi.p.navigationsample.Help.FontChange;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
+
 
 public class CEditText extends AppCompatEditText {
     Context ctx;

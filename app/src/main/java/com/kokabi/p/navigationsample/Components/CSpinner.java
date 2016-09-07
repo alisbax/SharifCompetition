@@ -7,7 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
+
 
 public class CSpinner extends LinearLayout {
 

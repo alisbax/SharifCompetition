@@ -10,7 +10,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.kokabi.p.navigationsample.Help.AppController;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
+
 
 public class CustomSnackBarInternetError {
     public Snackbar show(View mainContent) {
