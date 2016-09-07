@@ -25,10 +25,10 @@ import com.kokabi.p.navigationsample.Components.CustomSnackBar;
 import com.kokabi.p.navigationsample.Fragments.AboutFragment;
 import com.kokabi.p.navigationsample.Fragments.SampleFragment;
 import com.kokabi.p.navigationsample.Help.AppController;
+import com.kokabi.p.navigationsample.Help.Constants;
 import com.kokabi.p.navigationsample.Help.CustomTypefaceSpan;
 import com.kokabi.p.navigationsample.Help.FontChange;
-import com.kokabi.p.navigationsample.Help.Constants;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
 
 import java.util.ArrayList;
 

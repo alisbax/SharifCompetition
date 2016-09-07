@@ -5,7 +5,7 @@ import android.util.Log;
 import com.kokabi.p.navigationsample.Help.AppController;
 import com.kokabi.p.navigationsample.Help.ErrorHandling;
 import com.kokabi.p.navigationsample.Objects.ServerObj;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;

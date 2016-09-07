@@ -13,11 +13,11 @@ import com.google.gson.JsonObject;
 import com.kokabi.p.navigationsample.EventBuss.GeneralMSB;
 import com.kokabi.p.navigationsample.Help.AppController;
 import com.kokabi.p.navigationsample.Help.Constants;
+import com.kokabi.p.navigationsample.R;
 import com.kokabi.p.navigationsample.Services.ApiClient;
 import com.kokabi.p.navigationsample.Services.Sample.SampleApiInterface;
 import com.kokabi.p.navigationsample.Services.ServerListener;
 import com.kokabi.p.navigationsample.Services.ServerResponse;
-import com.kokabi.p.programmingmarathon1.R;
 
 import java.util.HashMap;
 

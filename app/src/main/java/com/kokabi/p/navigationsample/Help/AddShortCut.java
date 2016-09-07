@@ -3,7 +3,8 @@ package com.kokabi.p.navigationsample.Help;
 import android.content.Intent;
 
 import com.kokabi.p.navigationsample.Activities.SplashActivity;
-import com.kokabi.p.programmingmarathon1.R;
+import com.kokabi.p.navigationsample.R;
+
 
 /**
  * Created by P.kokabi on 8/31/2016.
